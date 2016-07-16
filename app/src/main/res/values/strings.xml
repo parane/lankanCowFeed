@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CowFeed</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_name">Cow Weight</string>
+    <string name="hint_email">Milk per day (l)</string>
+    <string name="hint_password">Fat (per)</string>
+    <string name="btn_sign_up">Submit</string>
+    <string name="err_msg_name">Enter valid weight</string>
+    <string name="err_msg_email">Enter valid number</string>
+    <string name="err_msg_password">Enter the number</string>
+</resources>

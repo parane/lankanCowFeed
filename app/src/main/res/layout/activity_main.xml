@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+</android.support.design.widget.AppBarLayout>-->
+
+<LinearLayout
+android:layout_width="fill_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:paddingLeft="20dp"
+android:paddingRight="20dp"
+android:paddingTop="20dp"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="68dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cow" />
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cow Feed"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+    </LinearLayout>
+<android.support.design.widget.TextInputLayout
+    android:id="@+id/input_layout_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_name" />
+</android.support.design.widget.TextInputLayout>
+
+<android.support.design.widget.TextInputLayout
+    android:id="@+id/input_layout_email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_email" />
+</android.support.design.widget.TextInputLayout>
+
+<android.support.design.widget.TextInputLayout
+    android:id="@+id/input_layout_password"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_password" />
+</android.support.design.widget.TextInputLayout>
+
+
+    <cow.atuts.com.cowfeed.MultiSpinner
+        android:id="@+id/BulkForage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#d11f08"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        />
+    <cow.atuts.com.cowfeed.MultiSpinner
+        android:id="@+id/Supplementary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#d11f08"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        />
+    <cow.atuts.com.cowfeed.MultiSpinner
+        android:id="@+id/Forage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#d11f08"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+<Button android:id="@+id/btn_signup"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_sign_up"
+    android:background="@color/colorPrimary"
+    android:onClick="onSubmit"
+
+    android:layout_marginTop="40dp"
+    android:textColor="@android:color/white"/>
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
