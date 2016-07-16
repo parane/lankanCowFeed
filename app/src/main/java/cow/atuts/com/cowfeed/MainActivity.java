@@ -55,11 +55,21 @@ public class MainActivity extends AppCompatActivity  implements
         List<String> seclist = getStringValue(multiSpinner2.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatTwo().keySet()));
         List<String> threlist = getStringValue(multiSpinner3.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatThree().keySet()));
 
+       
         Result result = DataGenerator.calculate(cowweight,milkper,fatpe,firstlist,seclist,threlist);
 
       /*  Result result =new Result();
         result.setConcentrate("dskdnskd");
         result.setSupplementaryForage("sdskdnskd");
+
+         // Input
+        List<String> selectedBulkForage = new ArrayList<>(Arrays.asList("co3","gunia"));
+
+        //Input
+        List<String> selectedSupplementary = new ArrayList<>(Arrays.asList("gliricidia","albezia"));
+
+        //Input
+        List<String> concentrateForage = new ArrayList<>(Arrays.asList("coconutpoonac"));
         result.setBulkForage("sdskdnskd");*/
         Intent in = new Intent(MainActivity.this,ResultActivity.class);
 
