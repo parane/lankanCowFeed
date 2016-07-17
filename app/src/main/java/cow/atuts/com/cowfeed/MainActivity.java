@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity  implements
         List<String> seclist = getStringValue(multiSpinner2.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatTwo().keySet()));
         List<String> threlist = getStringValue(multiSpinner3.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatThree().keySet()));
 
-       
+
         Result result = DataGenerator.calculate(cowweight,milkper,fatpe,firstlist,seclist,threlist);
 
       /*  Result result =new Result();
