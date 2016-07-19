@@ -47,36 +47,27 @@ public class MainActivity extends AppCompatActivity  implements
 
     public void onSubmit(View v) {
 
-        Double cowweight =Double.parseDouble(weight.getText().toString().trim());
-        Double milkper =Double.parseDouble(milk.getText().toString().trim());
-        Double fatpe =Double.parseDouble(fat.getText().toString().trim());
+        Double cowweight = Double.parseDouble(weight.getText().toString().trim());
+        Double milkper = Double.parseDouble(milk.getText().toString().trim());
+        Double fatpe = Double.parseDouble(fat.getText().toString().trim());
 
-        List<String> firstlist = getStringValue(multiSpinner1.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatOne().keySet()));
-        List<String> seclist = getStringValue(multiSpinner2.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatTwo().keySet()));
-        List<String> threlist = getStringValue(multiSpinner3.getSelectedItems(), new ArrayList<String>(DataGeneratorHelper.getFeedNutritionCatThree().keySet()));
+        List<String> bulkForageToSelect = new ArrayList<>(Arrays.asList("co3", "gunia", "seteria"));
+        List<String> supplementoryToSelect = new ArrayList<>(Arrays.asList("albezia", "ipil", "gliricidia"));
+        List<String> concentrateToSelect = new ArrayList<>("ricebran", "coconutpoonac");
+
+        List<String> firstlist = getStringValue(multiSpinner1.getSelectedItems(), bulkForageToSelect);
+        List<String> seclist = getStringValue(multiSpinner2.getSelectedItems(), supplementoryToSelect);
+        List<String> threlist = getStringValue(multiSpinner3.getSelectedItems(), concentrateToSelect);
 
 
         Result result = DataGenerator.calculate(cowweight,milkper,fatpe,firstlist,seclist,threlist);
 
-      /*  Result result =new Result();
-        result.setConcentrate("dskdnskd");
-        result.setSupplementaryForage("sdskdnskd");
-
-         // Input
-        List<String> selectedBulkForage = new ArrayList<>(Arrays.asList("co3","gunia"));
-
-        //Input
-        List<String> selectedSupplementary = new ArrayList<>(Arrays.asList("gliricidia","albezia"));
-
-        //Input
-        List<String> concentrateForage = new ArrayList<>(Arrays.asList("coconutpoonac"));
-        result.setBulkForage("sdskdnskd");*/
         Intent in = new Intent(MainActivity.this,ResultActivity.class);
 
         in.putExtra("MyClass", result);
         startActivity(in);
 
-        Log.d("parani","parani"+result.getBulkForage());
+        Log.d("parani", "parani" + result.getBulkForage());
     }
 
     public List<String> getStringValue(boolean[] selected,List<String> list){
